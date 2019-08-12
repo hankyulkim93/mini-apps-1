@@ -1,6 +1,14 @@
-table, td, tr {
+table, tr {
     border: 1px solid black;
-    width: 200px;
-    height: 60px;
+    width: 250px;
+    height: 70px;
+    
+}
+
+td {
+    border: 1px solid black;
+    width: 250px;
+    height: 70px;
+    font: 20px bold;
     text-align: center;
 }
