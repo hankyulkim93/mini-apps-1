@@ -72,8 +72,8 @@ let game = function() {
             }
 
             //display message when board is full/stalemate
-            if (player === 10) {
-                notice.innerHTML = 'No more playable spaces.';
+            if (player === 10 && !notice.innerHTML) {
+                notice.innerHTML = 'No more playable spaces. Draw.';
             }
         })
     })
