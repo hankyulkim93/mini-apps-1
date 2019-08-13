@@ -3,12 +3,16 @@
 let restartButton = document.getElementById('restart');
 
 restartButton.addEventListener('click', function() {
+    if (!notice.innerHTML || notice.innerHTML === 'X wins!') {
+        player = 1;
+    } else if (notice.innerHTML === 'O wins!') {
+        player = 12;
+    }
+    notice.innerHTML = '';
     cells.forEach(function(cell) {
         cell.innerHTML = '';
-        player = 1;
-        notice.innerHTML = '';
-        game();
     });
+    game();
 });
 
 //detect 3-in-a-row
@@ -72,7 +76,7 @@ let game = function() {
             }
 
             //display message when board is full/stalemate
-            if (player === 10 && !notice.innerHTML) {
+            if ((player === 10 || player === 21) && !notice.innerHTML) {
                 notice.innerHTML = 'No more playable spaces. Draw.';
             }
         })
