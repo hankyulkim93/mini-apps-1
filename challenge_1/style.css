@@ -8,6 +8,12 @@ h1 {
     color: white;
 }
 
+/* #players, {
+    display: table-cell;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
 table {
     margin-left: auto;
     margin-right: auto;
@@ -28,16 +34,24 @@ td {
     text-align: center;
 }
 
+h5 {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
 #restartbutton {
     text-align: center;
-    
+    margin-top: -20px;
 
 }
 
-h6 {
+#result {
     text-align: center;
     font-size: 75px;
     color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    margin-top: -5px;
 
 }

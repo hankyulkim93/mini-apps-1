@@ -7,6 +7,12 @@
 </head>
 <body>
   <h1>Han's Tic-Tac-Toe</h1>
+  <!-- <div id="score">
+    <span>0</span>-<span>0</span>
+  </div>
+  <div id="players">
+    <span>Player 1</span>-<span>Player 2</span>
+  </div> -->
   <div id="gametable">
     <table id="game">
       <tr id="row1">
@@ -26,10 +32,11 @@
       </tr>      
     </table>
   </div>
+  <h5><span id='xwin'>Player X -> 0</span> - <span id='owin'>0 &lt- Player O</span></h5>
   <div id="restartbutton">
     <button id='restart'>New Game</button>
   </div>
-  <h6 id='result'></h6>
+  <h5 id='result'></h5>
   <script src="app.js"></script>
 </body>
 </html>

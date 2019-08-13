@@ -5,8 +5,14 @@ let restartButton = document.getElementById('restart');
 restartButton.addEventListener('click', function() {
     if (!notice.innerHTML || notice.innerHTML === 'X wins!') {
         player = 1;
+        var xWin = document.getElementById("xwin").innerHTML;
+        let xScore = parseInt(xWin[xWin.length-1]) + 1;
+        document.getElementById("xwin").innerHTML = xWin.slice(0, xWin.length-1) + xScore;
     } else if (notice.innerHTML === 'O wins!') {
         player = 12;
+        var oWin = document.getElementById("owin").innerHTML;
+        let oScore = parseInt(oWin[0]) + 1;
+        document.getElementById("owin").innerHTML = oScore.toString() + oWin.slice(1);
     }
     notice.innerHTML = '';
     cells.forEach(function(cell) {
